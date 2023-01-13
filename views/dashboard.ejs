@@ -1,0 +1,95 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard - ZuziaDev</title>
+   </head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+ <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Admin Paneli</div>
+<div class="dcontent">
+<div class="dcard">
+	<br>
+    <form action="/dashboard/info" method="post">
+<label for="text" name="tit" class="itxt">Başlık</label>
+<input class="input dtxt" name="tit" type="text" placeholder="Başlık">
+
+	<br>
+	<label for="text" class="itxt">Açıklama</label>
+  <textarea class="textarea dtxt" name="description" placeholder="Açıklama" rows="4" ></textarea>
+<br>
+	<input type="submit" value="Yükle" class="button is-dark up">
+    </form>
+<br>
+</div>
+    <br>
+<div class="dcard">
+<div class="columns is-mobile is-centered brah">
+  <div class="column is-half">
+    <p class="bd-notification is-primary">
+
+<form action="/upload/info" method="post" enctype="multipart/form-data">
+
+<div id="file-js-example" class="file is-centered is-boxed is-link has-nam">
+<label class="file-label brah">
+<input class="file-input" type="file" name="avatar" >
+<span class="file-cta">
+<span class="file-icon">
+        <i class='bx bx-upload toggle' style="font-size:25px;"></i>
+      </span>
+      <span class="file-label">
+        Dosya Seç
+      </span>
+    </span>
+    <span class="file-name" style="color:var(--text-color);">
+      ...
+    </span>
+    <input type="submit" value="Yükle" class="button is-success">
+  </label>
+</div>
+</form>
+  </div>
+</div>
+    </div>
+       </div> 
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+
+    </style>
+    <script>
+  const fileInput = document.querySelector('#file-js-example input[type=file]');
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector('#file-js-example .file-name');
+      fileName.textContent = fileInput.files[0].name;
+    }
+  }
+</script>
+</html>

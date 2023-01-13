@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Analiz - ZuziaDev</title>
+   </head>
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+ <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Site Analizi</div>
+<div class="content">
+    <div class="card" style="margin-left:80px;">
+<h4 class="headerfore txt">Siteye Ziyaret Sayısı <span class="embed"><%= number %></span></h4>
+</div>
+</div>
+    </section>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+
+    </style>
+</html>

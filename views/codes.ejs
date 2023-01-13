@@ -1,0 +1,77 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kodlar ve Forumlar - ZzuiaDev</title>
+   </head>
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+ <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Kodlar ve Forumlar</div>
+<div class="content">
+<% main.map(x => { %>
+<div id="card" class="card" style="margin-left:80px;" id="<%=  x.discriminator %>">
+<h1 class="headerr txt"><%=  x.title %> <span class="etiket">#<%=  x.discriminator %></span></h1>
+		<br>
+<h4 class="headerfore txt" ><%= x.date %></h4>
+		<br>
+<p class="txt"><%= x.description %></p>
+		<br>
+<p class="footer txt"><%= x.user %></p>
+</div>
+    <br>
+    <%})%>
+    </section>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+$(document).ready(function () {
+ 
+// keyup ile inputa herhangi bir değer girilince fonksiyonu tetikliyoruz
+$("#ara").keyup(function(){
+ 
+// inputa yazılan değeri alıyoruz
+var value = $("#ara").val();
+ 
+// eğer input içinde değer yoksa yani boşsa tüm menüyü çıkartıyoruz
+if(value.length==0){
+ 
+$("#card h1").show();
+ 
+// arama yapılmışsa ilk olarak tüm menüyü gizliyoruz ve girilen değer ile eşleşen kısmı çıkarıyoruz
+}else{
+ 
+$("#card h1").hide();
+$("#card h1:contains("+value+")").show();
+ 
+}
+ 
+});
+ 
+});
+    </style>
+</html>

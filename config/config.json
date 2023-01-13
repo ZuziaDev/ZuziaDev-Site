@@ -1,0 +1,12 @@
+{
+  "clientID":"924363100608675892",
+  "secret":"SecretID",
+  "callbackURL": "https://zuziadev.ga/callback",
+  "guildID":"901834626643923014",
+  "ekipo":"890626326350946364",
+  "ekipl":"920315243106795570",
+  "ekipk":"695995816791507024",
+  "ekipm":"290788564151828480",
+  "mongoURL":"MongoUrl",
+  "token":"Bot Token"
+}

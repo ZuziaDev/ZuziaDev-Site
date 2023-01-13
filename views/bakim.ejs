@@ -1,0 +1,58 @@
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="sidebar.css">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script async src="https://cse.google.com/cse.js?cx=8565d9760b92d45e2">
+</script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bakım - ZuziaDev</title>
+   </head>
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+     <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Anasayfa</div>
+<div class="content">
+    <div class="card" style="margin-left:80px;">
+<h1 class="headerr txt">Site şuan bakımda!!<span class="etiket">#0000</span></h1>
+		<br>
+<h4 class="headerfore txt"><%= date %></h4>
+		<br>
+<p class="txt">Site bir süre bakımda olacaktır.</p>
+		<br>
+<p class="footer txt">ZuziaDev</p>
+
+</div>
+
+</div>
+    </section>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+
+    </style>
+</html>

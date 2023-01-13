@@ -1,0 +1,51 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kodlar ve Forumlar -  ZuziaDev</title>
+   </head>
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+ <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Kodlar ve Forumlar</div>
+<div class="content">
+<div class="card" style="margin-left:80px;">
+<h1 class="headerr txt">Lütfen Sonra Tekrar Geliniz! <span class="etiket">#0000</span></h1>
+        <br>
+<h4 class="headerfore txt" ><%= date %></h4>
+        <br>
+<p class="txt">Burda herhangi bir kod ya da form bulunmuyor.</p>
+        <br>
+<p class="footer txt">ZuziaDev</p>
+</div>
+    </section>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+
+    </style>
+</html>

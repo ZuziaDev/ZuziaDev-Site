@@ -1,0 +1,17 @@
+{
+    "main": [
+        {
+            "title": "Süleyman",
+            "description": "Süslü Süleymanlar Kutsaldır.",
+            "discriminator": "0001",
+            "date": "12:35 - 26/12/2022",
+            "user": "Zuziâ RodzeN"
+        }
+    ],
+    "test": [
+        {
+            "xp": 500,
+            "requiredXP": 356
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ZuziaDev</title>
+   </head>
+<body> 
+<div class="js">
+ 
+    <div id="preloader"></div>
+ <%- include('parts/sidebar') %>
+   <section class="home">
+        <div class="text">Anasayfa</div>
+<div class="content">
+<center>
+    <div class="card">
+<h1 class="headerr txt">Biz Kimiz?  <span class="etiket">#0001</span></h1>
+		<br>
+<h4 class="headerfore txt">21:33 - 14/12/2022</h4>
+		<br>
+<p class="txt">Biz çeşitli konularda insanlara yardım eden bir grubuz.</p>
+		<br>
+<p class="footer txt">ZuziaDev</p>
+
+</div>
+<br>
+    <div class="card">
+<h1 class="headerr txt">Hangi Diller ve Modüller Paylaşıyoruz ve Yardım Ediyoruz?  <span class="etiket">#0002</span></h1>
+		<br>
+<h4 class="headerfore txt">21:33 - 14/12/2022</h4>
+		<br>
+<p class="txt">Sitedeki her admin farklı dil ve modüller bilmektedir. Ama kesin bi cevap olarak şunu söyleye bilirim ki <span class="embed">HTML</span>, <span class="embed">CSS</span>, <span class="embed">JavaScript</span>, <span class="embed">Nukleon</span>, <span class="embed">MongoDB</span>, <span class="embed">Multer</span>, benzeri modül ve dillerin yardımını vermekteyiz.</p>
+		<br>
+<p class="footer txt">ZuziaDev</p>
+<br>
+</div>
+<br>
+ <div class="card">
+<h1 class="headerr txt">Github  <span class="etiket">#0003</span></h1>
+		<br>
+<h4 class="headerfore txt">16:41 - 25/12/2022</h4>
+		<br>
+<p class="txt"><a style="color:var(--text-color);" href="https://github.com/ZuziaDev">Zuziâ RodzeN</a>, <a href="https://github.com/Layona-x" style="color:var(--text-color);" >Layona</a>, <a href="https://github.com/Hasan-Kilici" style="color:var(--text-color);" >Khawetra</a></p>
+		<br>
+<p class="footer txt">ZuziaDev</p>
+
+</div>
+</div>
+</center>
+    </section>
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--yukarıdaki satır jquery kütüphanesidir -->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            $(window).load(function () {
+                $('#preloader').fadeOut('slow', function () { $(this).remove(); });
+            });
+
+        });
+</script>
+  <style type="text/css">
+    .js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #000 url('uploads/loader.gif') no-repeat center center;
+}
+
+    </style>
+</html>
